@@ -1,0 +1,141 @@
+
+        [
+                {
+                        "id": 1,
+                        "name": "BONNEVILLE BOBBER",
+                        "price": "From $13,795.00",
+                        "image": "../img/products/classic/bonneville-bobber_my23_red-hopper_rhs_1080px.png",
+                        "detail1": "398cc TR engine",
+                        "detail2": "10,000 miles / 16,000 km service interval",
+                        "quantity": 5,
+                        "brand": "classic"
+                },
+                {
+                        "id": 2,
+                        "name": "SPEED 400",
+                        "price": "From $4,995.00",
+                        "image": "../img/products/classic/bonneville speedmaster_my24_phantom red_rhs_1080px.png",
+                        "detail1": "398cc TR engine",
+                        "detail2": "10,000 miles / 16,000 km service interval",
+                        "detail3":"riding modes (Road and Rain)" ,
+                        "detail4":"3.1 gallon fuel tank",
+                        "quantity": 20,
+                        "brand": "classic"
+                },
+                {
+                        "id": 3,
+                        "name": "SCRAMBLER 400 X",
+                        "price": "From $5,595.00",
+                        "image": "../img/products/classic/scrambler 400 x_my24_phantom black_rhs.png",
+                        "detail1": "398cc TR engine",
+                        "detail2": "10,000 miles / 16,000 km service interval",
+                        "detail3":"Liquid-cooled, 4 valve, DOHC, single-cylinder" ,
+                        "detail4": "3.43 US gal (13 litres)",
+                        "quantity": 10,
+                        "brand": "classic"
+                },
+                {
+                        "id": 4,
+                        "name": "SPEED TWIN 900",
+                        "price": "From $9,895.00",
+                        "image": "../img/products/classic/speed twin 900_my24_phantom green_rhs_1080px.png",
+                        "detail1": "398cc TR engine",
+                        "detail2": "10,000 miles / 16,000 km service interval",
+                        "quantity": 2,
+                        "brand": "classic"
+                },
+             
+                {
+                        "id": 5,
+                        "name": "SCRAMBLER 1200",
+                        "price": "From $13,595.00",
+                        "image": "../img/products/classic/scrambler 400 x_my24_phantom black_rhs.png",
+                        "detail1": "398cc TR engine",
+                        "detail2": "10,000 miles / 16,000 km service interval",
+                        "quantity": 7,
+                        "brand": "classic"
+                },
+                {
+                        "id": 6,
+                        "name": "THRUXTON RS",
+                        "price": "From $16,995.00",
+                        "image": "../img/products/classic/thruxton rs_my24_final edition_rhs_1080px.png",
+                        "detail1": "1,200cc Thruxton-tuned engine",
+                        "detail2": "Original cafe racer design DNA",
+                        "quantity": 9,
+                        "brand": "classic"
+                },
+  
+                {
+                        "id": 7,
+                        "name": "NEW TIGER 900 RANGE",
+                        "price": "From $14,995.00",
+                        "image": "../img/products/adventure/tiger 900 gt_my24_snowdonia white_rhs_1080px.png",
+                        "detail1": "888 cc",
+                        "detail2": "6 riding modes (Road, Rain, Sport, Rider Configurable, Off-Road and Off-Road Pro)",
+                        "detail3": " 21 inches front over 17inches Rear lightweight tubeless spoked wheels)",
+                        "detail4":"5.28 US gal (20 litres)",
+                        "quantity": 20,
+                        "brand": "adventures"
+                },
+                {
+                        "id": 8,
+                        "name": "NEW TIGER 900 GT PRO",
+                        "price": "From $16,895.00",
+                        "image": "../img/products/adventure/tiger-900-gt-low-pure-white-rhs-1920x1080.png",
+                        "detail1": "888 cc",
+                        "detail2": "Multipoint sequential electronic fuel injection with electronic throttle control",
+                        "detail3":"Liquid-cooled, 12 valve, DOHC, inline 3-cylinder",
+                        "detail4":"108 PS / 106.5 bhp (79.5 kW) @ 9,500 rpm",
+                        "quantity": 20,
+                        "brand": "adventures"
+                },
+                {
+                        "id": 9,
+                        "name": "TIGER SPORT 660",
+                        "price": "From $9,695.00",
+                        "image": "../img/products/adventure/tiger-sport-660-lucerne-blue-sapphire-black-rhs-1080.png",
+                        "detail1": "660cc triple engine",
+                        "detail2": "Category-leading capability and ride",
+                        "detail3": "Showa remote adjustable suspension",
+                        "quantity": 10,
+                        "brand": "adventures"
+                },
+                {
+                        "id": 10,
+                        "name": "TIGER 850 SPORT",
+                        "price": "From $12,290.00",
+                        "image": "../img/products/adventure/tiger-sport-graphite-diablo-red-rhs-1080.png",
+                        "detail1": "850 T-plane triple engine",
+                        "detail2": "Road-focused adventure versatility",
+                        "detail3": "5.2 US gallon fuel tank",
+                        "detail4": "Road and Rain riding modes",
+                        "quantity": 9,
+                        "brand": "adventures"
+                },
+                {
+                        "id": 11,
+                        "name": "TIGER 1200 GT",
+                        "price": "From $19,595.00",
+                        "image": "../img/products/adventure/my22-tiger-1200-gt-pro-lucerne-blue-rhs-1080.png",
+                        "detail1": "1160cc T-plane triple engine",
+                        "detail2": "High performance dual-purpose bikes",
+                        "detail3": "3 years, unlimited mileage warranty",
+                        "quantity": 15,
+                        "brand": "adventures"
+                },
+                {
+                        "id": 12,
+                        "name": "TIGER 1200 RALLY",
+                        "price": "From $22,995.00",
+                        "image": "../img/products/adventure/my22-tiger-1200-rally-explorer-snowdonia-white-rhs-1080.png",
+                        "detail1": "1160cc T-plane triple engine",
+                        "detail2": "High performance dual-purpose bikes",
+                        "detail3": "3 years, unlimited mileage warranty",
+                        "quantity": 19,
+                        "brand": "adventures"
+                }
+        ]
+        
+
+

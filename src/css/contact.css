@@ -1,0 +1,38 @@
+/* address*/
+.address{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.table{
+    border: 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+h1{
+    color: blue;
+    text-align: center;
+}
+.table ul{
+    padding:0;
+    display: grid;
+    grid-template-columns:30% 70%;
+    row-gap: 10px;
+    margin-left: auto;
+    margin-right:auto;
+}
+.input{
+    width: 90%;
+    text-align: left;
+}
+.label{
+    text-align: right;
+    text-indent: none;
+}
+.btn{
+    text-align: center;
+    align-items: center;
+}
+.contact{
+    margin-bottom: 80px;
+}

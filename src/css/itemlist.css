@@ -1,0 +1,106 @@
+/* top img*/
+.productlist h1 {
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: 250%;
+}
+.toppic{
+    /* border: solid blue 2px; */
+    max-width: 100%;
+    height: 500px;
+}
+.toppro {
+    width: 100%;
+    height:100%;
+}
+.toppro img{
+    width: 100%;
+    height: 100%;
+}
+/* sort */
+.sortlist{
+    text-align: right;
+    margin-right: 80px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    
+}
+/* 2 section box classic,adven*/
+.classiclist {
+    display: grid;
+    /* border: 2px solid blue; */
+    grid-template-columns:auto;
+    text-indent: 0%;
+    padding: 0%;
+    max-width: 100%;
+    margin-bottom: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/* layout danh muc trong section */
+/*left column */
+.classicleft {
+    /* border: 2px solid blue; */
+    grid-template-columns: 20% auto;
+    padding: 10px;
+    text-indent: 0%;
+
+}
+
+/*right column */
+.classicrightlist {
+    padding: 0%;
+    text-indent: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.classicrightlist ul {
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 0%;
+    max-width: 100%;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+}
+
+.classicrightlist ul li {
+    list-style: none;
+    /* border: 2px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
+
+}
+.classicrightlist img{
+    margin-top: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* product body */
+.productlist {
+    /* border: 2px solid red; */
+    display: grid;
+    
+  max-width: 100%;
+    padding: 0%;
+    text-indent: 0%;
+}
+ button{
+    border:none;
+    font-size: 13px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 32px 0px;
+    background-color: white;
+    border-radius: 8px;;
+}
+ button:hover {
+    cursor: pointer;
+   background-color:rgba(128, 128, 128, 0.625);
+}
