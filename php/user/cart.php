@@ -2,6 +2,7 @@
     session_start();
     $user=$_SESSION["user"];
     $userId=$_SESSION["userId"];
+    
     $conn= mysqli_connect("localhost","root","","triumph_php");
     if(!$conn){
         die("error connect db");
@@ -46,11 +47,15 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
+                <th>Total</th>
                 <th>Action</th>
             </tr>
             </thead>
            <tbody>
             <?php
+            $subTotal=0;
+            $total=0;
+        
                foreach($cartList as $pro){
             ?>
             <tr> 
@@ -60,17 +65,20 @@
                 <td><?=$pro["proName"]?></td>
                 <td><?=$pro["proPrice"]?></td>
                 <td><?=$pro["cartQuantity"]?></td>
+                <td><?=$subTotal=($pro["proPrice"]*$pro["cartQuantity"])?></td>
                 <td>
                 <a href="process-product-increase.php?id=<?=$pro["proId"]?>" class="btn btn-danger">increase</a>
                 <a href="process-product-decrease.php?id=<?=$pro["proId"]?>" class="btn btn-danger">decrease</a>
                 </td>
             </tr>
         <?php  
+            $total += $subTotal;
          }
         ?>
         </tbody>
-  
+<?php ?>
         </table>
+        <h1>Total: <?=$total?> </h1>
     <?php
 
     }
