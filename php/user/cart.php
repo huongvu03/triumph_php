@@ -79,6 +79,7 @@
 <?php ?>
         </table>
         <h1>Total: <?=$total?> </h1>
+        <a href="order.php?userId=<?=$userId?>">Order</a>
     <?php
 
     }
