@@ -4,7 +4,6 @@
 
 session_start();
     $queryName=$sort="";
-    
     if(isset($_GET["sname"])) {
         $queryName= " and proName like '%".$_GET["sname"] ."%'  ";
        

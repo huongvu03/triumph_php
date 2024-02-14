@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $user=$_SESSION["user"];
+    // $user=$_SESSION["user"];
+    $userName=$_SESSION["userName"];
     $userId=$_SESSION["userId"];
     
     $conn= mysqli_connect("localhost","root","","triumph_php");
