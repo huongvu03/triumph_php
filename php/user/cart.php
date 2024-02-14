@@ -62,7 +62,7 @@
             <tr> 
                 
                 <td><?=$pro["proId"]?></td>
-                <td><img src="<?=$pro["proImg"]?>" alt="" width="100px" height="100px" ></td>
+                <td><img src="../admin/<?=$pro["proImg"]?>" alt="" width="100px" height="100px" ></td>
                 <td><?=$pro["proName"]?></td>
                 <td><?=$pro["proPrice"]?></td>
                 <td><?=$pro["cartQuantity"]?></td>

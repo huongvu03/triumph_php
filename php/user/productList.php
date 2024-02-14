@@ -62,6 +62,9 @@ mysqli_close($conn);
    
   
     <h1>Product List</h1>
+    <a href="cart.php" class="btn btn-success">
+        Cart
+    </a>
     <form action="">
         Name: <input type="text" name="sname"> <input type="submit" value="Search">
     </form>
