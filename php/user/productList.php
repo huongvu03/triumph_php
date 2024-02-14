@@ -119,7 +119,7 @@ mysqli_close($conn);
                         </div>
 
                         <div class='btn'>
-                          <div  class='btnadd'><a href="cart.php?proId=<?=$pro["proId"]?>"  >Add to Cart </a></div>
+                          <div  class='btnadd'><a href="process-product-add.php?proId=<?=$pro["proId"]?>"  >Add to Cart </a></div>
                         </div>
                     </div>
                

@@ -15,11 +15,11 @@ $checkResult = mysqli_query($conn, $checkQuery);
 //nếu có thì update quantity của nó -1
 if (mysqli_num_rows($checkResult) > 0) {
     
-    $updateQuery = "UPDATE cart SET proQuantity = proQuantity - 1 WHERE proId = $proId";
+    $updateQuery = "UPDATE cart SET cartQuantity = cartQuantity - 1 WHERE proId = $proId";
     $updateResult = mysqli_query($conn, $updateQuery);
 
 }
-$removeQuery = "DELETE FROM cart WHERE proId = $proId AND proQuantity = 0";
+$removeQuery = "DELETE FROM cart WHERE proId = $proId AND cartQuantity = 0";
 mysqli_query($conn, $removeQuery);
 
 mysqli_close($conn);

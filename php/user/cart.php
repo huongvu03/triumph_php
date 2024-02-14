@@ -68,8 +68,8 @@
                 <td><?=$pro["cartQuantity"]?></td>
                 <td><?=$subTotal=($pro["proPrice"]*$pro["cartQuantity"])?></td>
                 <td>
-                <a href="process-product-increase.php?id=<?=$pro["proId"]?>" class="btn btn-danger">increase</a>
-                <a href="process-product-decrease.php?id=<?=$pro["proId"]?>" class="btn btn-danger">decrease</a>
+                <a href="process-product-increase.php?proId=<?=$pro["proId"]?>" class="btn btn-danger">increase</a>
+                <a href="process-product-decrease.php?proId=<?=$pro["proId"]?>" class="btn btn-danger">decrease</a>
                 </td>
             </tr>
         <?php  
