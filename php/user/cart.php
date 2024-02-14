@@ -48,7 +48,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>Total</th>
+                <th>SubTotal</th>
                 <th>Action</th>
             </tr>
             </thead>
