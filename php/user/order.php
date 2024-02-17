@@ -10,7 +10,8 @@
 <div class="container">
         <h1>Order</h1>
         <form action="process-product-order.php" method="post">
-        <input type="hidden" name="proId" value="<?=$_GET["Id"]?>"/>
+        <input type="hidden" name="userId" value="<?=$_GET["userId"]?>"/>
+        <input type="hidden" name="total" value="<?=$_GET["total"]?>"/>
         <div class="form-group">
             <label>Name</label>
             <input class="form-control" name="name">

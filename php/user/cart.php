@@ -66,10 +66,11 @@
                 <td><?=$pro["proName"]?></td>
                 <td><?=$pro["proPrice"]?></td>
                 <td><?=$pro["cartQuantity"]?></td>
-                <td><?=$subTotal=($pro["proPrice"]*$pro["cartQuantity"])?></td>
+                <td>$ <?=$subTotal=($pro["proPrice"]*$pro["cartQuantity"])?></td>
                 <td>
-                <a href="process-product-increase.php?proId=<?=$pro["proId"]?>" class="btn btn-danger">increase</a>
-                <a href="process-product-decrease.php?proId=<?=$pro["proId"]?>" class="btn btn-danger">decrease</a>
+                <a href="process-product-decrease.php?proId=<?=$pro["proId"]?>" class="btn btn-danger">-</a>
+                <a href="process-product-increase.php?proId=<?=$pro["proId"]?>" class="btn btn-danger">+</a>
+               
                 </td>
             </tr>
         <?php  
@@ -77,10 +78,10 @@
          }
         ?>
         </tbody>
-<?php ?>
         </table>
-        <h1>Total: <?=$total?> </h1>
-        <a href="order.php?userId=<?=$userId?>">Order</a>
+        <h3 class="center">Total: $<?=$total?> </h3>
+        
+        <a href="order.php?userId=<?= $userId ?>&total=<?= $total ?>" class="btn btn-success">Order</a>
     <?php
 
     }
