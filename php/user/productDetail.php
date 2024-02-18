@@ -1,17 +1,21 @@
 <?php
-    session_start();
+    if(isset($_GET["proId"])){
+        $proId= $_GET["proId"];
 
     $conn = mysqli_connect("localhost","root","","triumph_php");
     if(!$conn){
         die("error connect db");
     }
-    $query = "select * from product";
+    $query = "select * from product where proId=$proId";
     $result = mysqli_query($conn,$query);
-    $productList = array();
-    while($row = mysqli_fetch_array($result)){
-        $productList[]=$row;
+    if($result != null){
+        $product = mysqli_fetch_array($result);
+    }else{
+        die("cannot get product");
     }
     mysqli_close($conn);
+    // var_dump($product);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -24,58 +28,74 @@
 
 </head>
 <body>
-    <?php
-        // if(!isset($_SESSION["admin"])){
-        //     header("Location: login.php");
-        // }
-    ?>
-    <?php
-        // include("header.php");
-    ?>
-    <!-- <a href="Logout.php" class="btn btn-warning">
-        Logout
-    </a> -->
     <div class="container">
-        <h1>Product List</h1>
-        <a href="product-create.php">
-            <button class="btn btn-success">Add Product</button>
-        </a>
-        <?php
-            if(count($productList)==0){
-                echo '<h3>No records</h3>';
-            } else{
-        ?>
+        <h1>Product Detail</h1>
+        <a href="cart.php" class="btn btn-success">
+        Cart
+    </a>
         <table class="table table-hover">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Price</th>
+                    <th>Image</th>
                     <th>Quantity</th>
+                    <th>Price</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-            <?php
-            foreach($productList as $pro){
-            ?>
+            
                 <tr>
-                    <td><?=$pro["proId"]?></td>
-                    <td><?=$pro["proName"]?></td>
-                    <td><?=$pro["proImg"]?></td>
-                    <td><?=$pro["proQuantity"]?></td>
-                    <td><?=$pro["proPrice"]?></td>
+                    <td><?=$product["proId"]?></td>
+                    <td><?=$product["proName"]?></td>
+                    <td><?=$product["proImg"]?></td>
+                    <td><?=$product["proQuantity"]?></td>
+                    <td><?=$product["proPrice"]?></td>
                     <td>
-                        <a href="product-update.php?id=<?=$pro["id"]?>" class="btn btn-info">Update</a>
-                        <a href="product-delete.php?id=<?=$pro["id"]?>" class="btn btn-danger">Delete</a>
+                    <form action="productDetailProcess.php" method="post" >
+                            <button type="button"  onclick="handleMinus()"class="btn btn-danger">-</button>
+                            <input type="text" value="<?=$product["proId"]?>" hidden name="proId">
+                            <input id="amount" type="text" value="1" name="cartQuantity">
+                            <button type="button" onclick="handlePlus()"class="btn btn-danger">+</button>
+                            <button type="submit" class='btn btn-info' >Add to cart</button>
+                            </form>
+
+                        
+
                     </td>
                 </tr>
-            <?php
-            }?>
+                
             </tbody>
         </table>
-        <?php
-            }?>
     </div>
 </body>
+<script>
+    let amountElement = document.getElementById('amount');
+    let amount = amountElement.value
+    let render =(amount) => {
+        amountElement.value = amount
+    }
+    let handlePlus = () => {
+        if(amount < <?=$product["proQuantity"]?>){
+            amount++;
+        render(amount);
+        }
+
+    }
+    let handleMinus = () => {
+        if(amount >1){
+            amount--;
+        render(amount);
+        }
+        
+    }
+    amountElement.addEventListener('input', ()=>{
+        amount =amountElement.value;
+        amount = parseInt(amount);
+        amount =(isNaN(amount)||amount==0)?1:amount;
+        render(amount);
+    });
+
+</script>
 </html>
