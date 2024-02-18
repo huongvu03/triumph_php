@@ -49,7 +49,7 @@
                 <tr>
                     <td><?=$product["proId"]?></td>
                     <td><?=$product["proName"]?></td>
-                    <td><?=$product["proImg"]?></td>
+                    <img src="../admin/<?=$product["proImg"]?>" alt="triumph">
                     <td><?=$product["proQuantity"]?></td>
                     <td><?=$product["proPrice"]?></td>
                     <td>
