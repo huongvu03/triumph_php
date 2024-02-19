@@ -65,9 +65,9 @@ mysqli_close($conn);
     <?php
     include("header.php");
     ?>
-    <a href="addproduct.php">
+    <!-- <a href="addproduct.php">
         <button class="btn btn-success">Add Product</button>
-    </a>
+    </a> -->
  </div>
 
 <nav class="navbar" style="background-color: black;">
