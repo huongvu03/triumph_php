@@ -16,7 +16,7 @@
             //dang nhap sai
             header('Location: login.php?error=login-fail');
         }else{
-            $_SESSION["admin"]= $admin["username"];
+            $_SESSION["admin"]= $admin["adName"];
             header('Location: productList.php');
         }
     }

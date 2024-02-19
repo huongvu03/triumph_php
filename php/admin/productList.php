@@ -49,8 +49,10 @@ mysqli_close($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/item.css"> -->
+    <link rel="stylesheet" href="../../src/css/item.css">
     <link rel="stylesheet" href="../../src/css/itemlist.css">
+    <link rel="stylesheet" href="../css/productList.css">
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -59,21 +61,34 @@ mysqli_close($conn);
 </head>
 
 <body>
-    <!-- 
+<div class="productList-admin">
     <?php
-    include('header.php');
-    ?>     -->
-
+    include("header.php");
+    ?>
     <a href="addproduct.php">
         <button class="btn btn-success">Add Product</button>
     </a>
+ </div>
 
-    <br>
-
-    <h1>Product List</h1>
-    <form action="">
-        Name: <input type="text" name="sname"> <input type="submit" value="Search">
+<nav class="navbar" style="background-color: black;">
+  <!-- Navbar content -->
+   
+    <a href="productList.php">
+       PRODUCT
+    </a>
+    <a href="orderlist.php">
+       ORDER
+    </a>
+   
+        <form action="" class="productList-searchbar">
+        <input type="text" name="sname" class="searchbar"> <input type="submit" value="Search">
     </form>
+   
+
+</nav>
+   
+    <h1 style="text-align: center;">PRODUCT LIST</h1>
+   
     <h4>
         <?= isset($error) ? $error : "" ?>
     </h4>
@@ -95,7 +110,6 @@ mysqli_close($conn);
                     <input type="submit" name="asc" value="Sort Price Ascending">
                 </form>
             </div>
-            <ItemSearch searchValue={seachValue} onSearch={handleSearch} />
         </div>
         <div class='classiclist'>
             <div class='classicrightlist'>
@@ -121,13 +135,13 @@ mysqli_close($conn);
                                             <p>From $<?= $pro["proPrice"] ?></p>
                                         </div>
                                         <div class='quantity'>Quantity:<?= $pro["proQuantity"] ?></div>
-                                        
+
                                     </div>
                                 </div>
 
-                             
+
                                 <div class='button'>
-                                <div class='btn btn-danger' onClick="handleDelete(<?= $pro['proId'] ?>)">Delete</div>
+                                    <div class='btn btn-danger' onClick="handleDelete(<?= $pro['proId'] ?>)">Delete</div>
                                     <div class='btn btn-info'><a href="product-update.php?proId=<?= $pro["proId"] ?>">Update </a></div>
                                 </div>
 
