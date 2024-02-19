@@ -4,28 +4,27 @@
     }
 ?>
 
+</body>
+</html>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/login.css">  
-    <title>Document</title>
+	<title>LOGIN</title>
+	<link rel="stylesheet" type="text/css" href="../user/style.css">
 </head>
 <body>
-<div class="login" >
-    <form action="loginProcess.php" method="post">
-    <h1>Login</h1>
-    <h4 style="color:red">
-        <?= isset($error)?$error:"" ?>
-    </h4>
-    <form action="loginProcess.php" method="post">
-        <p>Username: <input type="text" name="username"></p>
-        <p>Password: <input type="password" name="password"></p>
-        <p><input type="submit" value="LOG IN" class="btn btn-primary"></p>
-    </form>
-</div>
+     <form action="loginProcess.php" method="post">
+     	<h2>LOGIN</h2>
+     	<?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	<?php } ?>
+     	<label>User Name</label>
+     	<input type="text" name="username" placeholder="User Name"><br>
 
+     	<label>PassWord</label>
+     	<input type="password" name="password" placeholder="Password"><br>
+
+     	<button type="submit">Login</button>
+     </form>
 </body>
 </html>

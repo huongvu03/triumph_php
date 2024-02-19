@@ -88,10 +88,10 @@
                 <td><?= $subTotal=($list["cartQuantity"]*$list["proPrice"])?></td>
 
                 
-                <td>
+                <!-- <td>
                 <a href="orderList-update.php?cartId=<?=$list["cartId"]?>" class="btn btn-danger">Update</a>
                 <a href="orderList-delete.php?cartId=<?=$list["cartId"]?>" class="btn btn-danger" >Delete</a>
-                </td>
+                </td> -->
             </tr>
         <?php  
             $total += $subTotal;
